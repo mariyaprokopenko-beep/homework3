@@ -24,7 +24,6 @@ public final class BattleEngine {
     }
 
     public void reset() {
-        // reset any battle state if needed
     }
 
     public EncounterResult runEncounter(List<Combatant> teamA, List<Combatant> teamB) {
@@ -41,7 +40,6 @@ public final class BattleEngine {
             round++;
             result.addLog("\n--- ROUND " + round + " ---");
 
-            // Team A attacks Team B
             for (Combatant attacker : new ArrayList<>(aliveA)) {
                 if (aliveB.isEmpty()) break;
                 Combatant target = aliveB.get(0);
@@ -55,7 +53,6 @@ public final class BattleEngine {
                 }
             }
 
-            // Team B attacks Team A
             for (Combatant attacker : new ArrayList<>(aliveB)) {
                 if (aliveA.isEmpty()) break;
                 Combatant target = aliveA.get(0);
